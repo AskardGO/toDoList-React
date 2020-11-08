@@ -1,0 +1,202 @@
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #b2bec3;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  height: 60px;
+  background-color: #a55eea;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 6px black;
+  font-family: 'Trispace', sans-serif;
+  font-weight: 700;
+  color: #dfe6e9;
+  font-size: 20px;
+}
+
+
+.task__board {
+  display: flex;
+  position: relative;
+  min-height: 250px;
+  width: 400px;
+  background-color: #dfe6e9;
+  justify-content: center;
+  box-shadow:  1px 1px 6px black;
+}
+
+.add__button {
+  position: absolute;
+  font-family: 'Trispace', sans-serif;
+  font-weight: 700;
+  background-color: #a55eea;
+  border-color: #a55eea;
+  border-radius: 15px;
+  bottom: -.5rem;
+  width: 120px;
+  height: 2.5em;
+  box-shadow:  1px 1px 6px black;
+}
+
+
+.ant-btn-primary:focus, .ant-btn-primary:hover {
+  background-color: #6c5ce7;
+  border-color: #a55eea;
+}
+
+.task__board {
+  display: flex;
+  padding: 10px;
+}
+
+.task__board-list {
+  position: absolute;
+  left: 20px;
+  width: 100%;
+}
+
+.task__board-list ul {
+  list-style-type: none;
+}
+
+.task__board-list li {
+  display: flex;
+  align-items: center;
+  transition: .3s;
+}
+
+.task__buttons {
+  display: flex;
+  position: absolute;
+  height: 23px;
+  width: 200px;
+  align-items: center;
+  right: -120px;
+}
+
+
+.task img {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.task img:hover {
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+.priority {
+  background-image: url("./priority_images/important_unchange.png");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.priority.high {
+  background-image: url("./priority_images/important.png");
+}
+
+.ready__task {
+  color: #b2bec3;
+  text-decoration: line-through;
+}
+
+.add__task-form {
+  height: 10px;
+  width: 90%;
+  padding: 10px 0 0 20px;
+}
+
+
+.ant-input:focus, .ant-input-focused {
+  border-color: #a55eea;
+}
+
+.add__task-form {
+  display: none;
+  opacity: 0;
+  transition: .3s;
+}
+
+
+.add__task-form input {
+  padding-right: 32px;
+}
+
+.accept {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 45px;
+}
+
+.add__task-form.active {
+  display: flex;
+  transition: opacity .6s;
+  animation: form .5s both;
+  height: 30px;
+  align-items: center;
+}
+
+@keyframes form {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.select__button {
+  position: absolute;
+  opacity: .3;
+  width: 75%;
+  height: 20px;
+  left: 22px;
+}
+
+.delElements {
+  position: absolute;
+  left: 10%;
+  height: 25px;
+  width: 25px;
+  background-image: url("./priority_images/trashcan-full-icon_34338.png");
+  background-size: 25px 25px;
+  opacity: .3;
+  transition: .8s;
+}
+
+.delElements.available {
+  opacity: 1;
+}
+
+.task.select span {
+  background-color: #a55eea;
+  border-radius: 8px;
+}
+
+
+
+
+
